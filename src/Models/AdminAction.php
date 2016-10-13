@@ -31,4 +31,17 @@ class AdminAction extends Eloquent
         return $actions;
     }
 
+    /**
+     * @return array[]
+     */
+    public static function idsByControllerAction()
+    {
+        $controllerNames = AdminController::controllersById();
+        $controllerActionsIds = [];
+        foreach (static::select(['id', 'controller_id', 'action'])->all() as $action) {
+            $controllerActionsIds[$controllerNames[$action->controller_id]][$action->action] = $action->id;
+        }
+        return $controllerActionsIds;
+    }
+
 }

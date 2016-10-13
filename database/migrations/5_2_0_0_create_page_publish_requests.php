@@ -32,7 +32,7 @@ class CreatePagePublishRequests extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_publish_requests');
     }
 
 }

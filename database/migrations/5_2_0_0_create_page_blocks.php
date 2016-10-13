@@ -32,7 +32,7 @@ class CreatePageBlocks extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_blocks');
     }
 
 }

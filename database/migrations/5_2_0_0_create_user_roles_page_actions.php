@@ -31,7 +31,7 @@ class CreateUserRolesPageActions extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('user_roles_page_actions');
     }
 
 }

@@ -1,6 +1,5 @@
 <?php
 
-use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
@@ -20,18 +19,6 @@ class CreateLanguages extends Migration
             $table->string('language');
             $table->timestamps();
         });
-
-        $date = new Carbon;
-
-        DB::table('languages')->insert(
-            array(
-                array(
-                    'language' => 'English',
-                    'created_at' => $date,
-                    'updated_at' => $date
-                )
-            )
-        );
     }
 
     /**
@@ -41,7 +28,7 @@ class CreateLanguages extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('languages');
     }
 
 }

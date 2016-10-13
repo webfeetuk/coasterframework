@@ -29,7 +29,7 @@ class CreatePageGroupPages extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_group_pages');
     }
 
 }

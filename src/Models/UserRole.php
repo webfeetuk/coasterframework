@@ -12,7 +12,6 @@ class UserRole extends Eloquent
 
     private $_processed_actions;
 
-
     public function users()
     {
         return $this->hasMany('CoasterCms\Models\User');
@@ -26,6 +25,18 @@ class UserRole extends Eloquent
     public function page_actions()
     {
         return $this->belongsToMany('CoasterCms\Models\Page', 'user_roles_page_actions', 'role_id', 'page_id')->withPivot('action_id', 'access');
+    }
+
+    /**
+     * @return array
+     */
+    public static function idsByName()
+    {
+        $userRoleIds = [];
+        foreach (static::select(['id', 'name'])->all() as $userRole) {
+            $userRoleIds[$userRole->name] = $userRole->id;
+        }
+        return $userRoleIds;
     }
 
     public function check_action($action, $options = [])

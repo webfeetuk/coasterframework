@@ -30,7 +30,7 @@ class CreateMenus extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('menu');
     }
 
 }

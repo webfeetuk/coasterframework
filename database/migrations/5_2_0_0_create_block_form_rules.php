@@ -30,7 +30,7 @@ class CreateBlockFormRules extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('block_form_rules');
     }
 
 }

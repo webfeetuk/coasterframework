@@ -32,7 +32,7 @@ class CreatePageBlocksRepeaterData extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_blocks_repeater_data');
     }
 
 }

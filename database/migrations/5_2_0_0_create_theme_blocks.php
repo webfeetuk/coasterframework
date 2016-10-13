@@ -32,7 +32,7 @@ class CreateThemeBlocks extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('theme_blocks');
     }
 
 }

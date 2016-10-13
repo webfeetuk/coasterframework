@@ -31,7 +31,7 @@ class CreateBackups extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('backups');
     }
 
 }

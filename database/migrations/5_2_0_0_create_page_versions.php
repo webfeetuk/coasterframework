@@ -33,7 +33,7 @@ class CreatePageVersions extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_versions');
     }
 
 }

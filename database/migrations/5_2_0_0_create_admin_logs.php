@@ -1,6 +1,5 @@
 <?php
 
-use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
@@ -21,19 +20,6 @@ class CreateAdminLogs extends Migration
             $table->string('log');
             $table->timestamps();
         });
-
-        $date = new Carbon;
-
-        DB::table('admin_logs')->insert(
-            array(
-                array(
-                    'user_id' => 1,
-                    'log' => 'Setup CMS',
-                    'created_at' => $date,
-                    'updated_at' => $date
-                )
-            )
-        );
     }
 
     /**
@@ -43,7 +29,7 @@ class CreateAdminLogs extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('admin_logs');
     }
 
 }

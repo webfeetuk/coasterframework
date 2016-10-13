@@ -30,7 +30,7 @@ class CreateBlockSelectopts extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('block_selectopts');
     }
 
 }

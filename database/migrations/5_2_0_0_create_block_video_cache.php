@@ -29,7 +29,7 @@ class CreateBlockVideoCache extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('block_video_cache');
     }
 
 }

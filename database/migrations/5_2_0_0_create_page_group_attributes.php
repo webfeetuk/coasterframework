@@ -30,7 +30,7 @@ class CreatePageGroupAttributes extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_group_attributes');
     }
 
 }

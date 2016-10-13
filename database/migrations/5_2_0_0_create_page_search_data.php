@@ -31,7 +31,7 @@ class CreatePageSearchData extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_search_data');
     }
 
 }

@@ -20,7 +20,6 @@ class CreatePageBlocksRepeaterRows extends Migration
             $table->integer('row_id');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -30,7 +29,7 @@ class CreatePageBlocksRepeaterRows extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('page_blocks_repeater_rows');
     }
 
 }

@@ -31,7 +31,7 @@ class CreateFormSubmissions extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('form_submissions');
     }
 
 }

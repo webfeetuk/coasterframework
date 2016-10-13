@@ -29,7 +29,7 @@ class CreateBlockRepeaters extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('block_repeaters');
     }
 
 }

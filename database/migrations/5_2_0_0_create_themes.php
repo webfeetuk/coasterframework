@@ -28,7 +28,7 @@ class CreateThemes extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('themes');
     }
 
 }

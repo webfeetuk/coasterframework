@@ -31,7 +31,7 @@ class CreateBlockBeacons extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('block_beacons');
     }
 
 }

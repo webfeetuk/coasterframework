@@ -12,4 +12,28 @@ class AdminController extends Eloquent
      */
     protected $table = 'admin_controllers';
 
+    /**
+     * @return array
+     */
+    public static function idsByController()
+    {
+        $controllerNames = [];
+        foreach (static::select(['id', 'controller'])->all() as $controller) {
+            $controllerNames[$controller->controller] = $controller->id;
+        }
+        return $controllerNames;
+    }
+
+    /**
+     * @return array
+     */
+    public static function controllersById()
+    {
+        $controllerNames = [];
+        foreach (static::select(['id', 'controller'])->all() as $controller) {
+            $controllerNames[$controller->id] = $controller->controller;
+        }
+        return $controllerNames;
+    }
+
 }

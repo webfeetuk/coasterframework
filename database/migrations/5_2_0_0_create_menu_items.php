@@ -32,7 +32,7 @@ class CreateMenuItems extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('menu_items');
     }
 
 }

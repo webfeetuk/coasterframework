@@ -37,7 +37,7 @@ class CreatePages extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('pages');
     }
 
 }
