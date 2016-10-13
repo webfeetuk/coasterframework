@@ -33,7 +33,7 @@ class UserRole extends Eloquent
     public static function idsByName()
     {
         $userRoleIds = [];
-        foreach (static::select(['id', 'name'])->all() as $userRole) {
+        foreach (static::select(['id', 'name'])->get() as $userRole) {
             $userRoleIds[$userRole->name] = $userRole->id;
         }
         return $userRoleIds;

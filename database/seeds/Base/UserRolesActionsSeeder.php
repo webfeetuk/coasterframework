@@ -114,7 +114,7 @@ class UserRolesActionsSeeder extends Seeder
             ],
             [
                 'role_id' => $userRoleIds['Coaster Admin'],
-                'action_id' => $controllerActionsIds['redirects']['manage'],
+                'action_id' => $controllerActionsIds['redirects']['edit'],
                 'created_at' => $date,
                 'updated_at' => $date
             ],

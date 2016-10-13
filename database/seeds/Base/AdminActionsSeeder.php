@@ -4,7 +4,6 @@ namespace CoasterCmsDatabase\Seeds\Base;
 use Carbon\Carbon;
 use CoasterCms\Models\AdminAction;
 use CoasterCms\Models\AdminController;
-use CoasterCms\Models\AdminMenu;
 use Illuminate\Database\Seeder;
 
 class AdminActionsSeeder extends Seeder
@@ -316,7 +315,7 @@ class AdminActionsSeeder extends Seeder
             ]
         ]);
 
-        $redirectsManageId = AdminMenu::insertGetId([
+        $redirectsManageId = AdminAction::insertGetId([
             'controller_id' => $controllerIds['redirects'],
             'action' => 'edit',
             'inherit' => 0,

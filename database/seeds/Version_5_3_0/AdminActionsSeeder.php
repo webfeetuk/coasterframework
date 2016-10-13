@@ -21,7 +21,7 @@ class AdminActionsSeeder extends Seeder
 
         AdminAction::insert([
             [
-                'controller_id' => $controllerIds['theme'],
+                'controller_id' => $controllerIds['themes'],
                 'action' => 'edit',
                 'inherit' => -1,
                 'edit_based' => 0,

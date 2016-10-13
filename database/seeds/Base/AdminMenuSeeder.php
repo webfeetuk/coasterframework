@@ -3,7 +3,6 @@ namespace CoasterCmsDatabase\Seeds\Base;
 
 use Carbon\Carbon;
 use CoasterCms\Models\AdminAction;
-use CoasterCms\Models\AdminController;
 use CoasterCms\Models\AdminMenu;
 use Illuminate\Database\Seeder;
 

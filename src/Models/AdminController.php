@@ -18,7 +18,7 @@ class AdminController extends Eloquent
     public static function idsByController()
     {
         $controllerNames = [];
-        foreach (static::select(['id', 'controller'])->all() as $controller) {
+        foreach (static::select(['id', 'controller'])->get() as $controller) {
             $controllerNames[$controller->controller] = $controller->id;
         }
         return $controllerNames;
@@ -30,7 +30,7 @@ class AdminController extends Eloquent
     public static function controllersById()
     {
         $controllerNames = [];
-        foreach (static::select(['id', 'controller'])->all() as $controller) {
+        foreach (static::select(['id', 'controller'])->get() as $controller) {
             $controllerNames[$controller->id] = $controller->controller;
         }
         return $controllerNames;

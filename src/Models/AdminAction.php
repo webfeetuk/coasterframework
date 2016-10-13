@@ -38,7 +38,7 @@ class AdminAction extends Eloquent
     {
         $controllerNames = AdminController::controllersById();
         $controllerActionsIds = [];
-        foreach (static::select(['id', 'controller_id', 'action'])->all() as $action) {
+        foreach (static::select(['id', 'controller_id', 'action'])->get() as $action) {
             $controllerActionsIds[$controllerNames[$action->controller_id]][$action->action] = $action->id;
         }
         return $controllerActionsIds;
